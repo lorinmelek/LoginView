@@ -18,10 +18,8 @@ class LoginVC: UIViewController {
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    
     @IBOutlet private weak var userIconImageView: UIImageView!
     @IBOutlet private weak var lockIconImageView: UIImageView!
-    
     @IBOutlet private weak var passwordToggleButton: UIButton!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     @IBOutlet private weak var loginButton: UIButton!
@@ -43,35 +41,27 @@ class LoginVC: UIViewController {
     }
     
     private func setupUI() {
-        welcomeLabel.text = "Welcome Back!"
-        
-        emailTextField.placeholder = ""
-        passwordTextField.placeholder = ""
+        welcomeLabel.text = LoginTexts.welcomeTitle
+        emailTextField.placeholder = LoginTexts.emptyPlaceholder
+        passwordTextField.placeholder = LoginTexts.emptyPlaceholder
         passwordTextField.isSecureTextEntry = true
-        
-        passwordToggleButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-        
-        forgotPasswordButton.setTitle("Forgot Password", for: .normal)
-       
-        loginButton.setTitle("Login", for: .normal)
-        
-        orContinueWithLabel.text = "- Or Continue With -"
-                
+        passwordToggleButton.setImage(UIImage(systemName: LoginImages.eyeClosed), for: .normal)
+        forgotPasswordButton.setTitle(LoginTexts.forgotPasswordTitle, for: .normal)
+        loginButton.setTitle(LoginTexts.loginButtonTitle, for: .normal)
+        orContinueWithLabel.text = LoginTexts.orContinueWith
         setupSocialButtons()
-        
-        createAccountLabel.text = "Create an account. Sign up"
-        
-        errorMessageLabel.text = ""
+        createAccountLabel.text = LoginTexts.createAccountText
+        errorMessageLabel.text = LoginTexts.emptyPlaceholder
         errorMessageLabel.textColor = .systemPink
+        userIconImageView.image = UIImage(systemName: LoginImages.person)
+        lockIconImageView.image = UIImage(systemName: LoginImages.lock)
         
-        userIconImageView.image = UIImage(systemName: "person")
-        lockIconImageView.image = UIImage(systemName: "lock")
     }
     
     private func setupSocialButtons() {
-        googleButton.setImage(UIImage(named: "google"), for: .normal)
-        appleButton.setImage(UIImage(systemName: "applelogo"), for: .normal)
-        facebookButton.setImage(UIImage(named: "facebook"), for: .normal)
+        googleButton.setImage(UIImage(named: LoginImages.google), for: .normal)
+        facebookButton.setImage(UIImage(named: LoginImages.facebook), for: .normal)
+        appleButton.setImage(UIImage(systemName: LoginImages.appleLogo), for: .normal)
     }
     
     private func setupTextFields() {
@@ -85,7 +75,6 @@ class LoginVC: UIViewController {
                     self?.showErrorMessage(message)
                 }
             }
-    
             viewModel.onLoadingStateChanged = { [weak self] isLoading in
                 DispatchQueue.main.async {
                     if isLoading {
@@ -95,7 +84,6 @@ class LoginVC: UIViewController {
                     }
                 }
             }
-        
             viewModel.onValidationStateChanged = { [weak self] isValid, errorMessage in
                 DispatchQueue.main.async {
                     self?.loginButton.isEnabled = isValid
@@ -113,7 +101,7 @@ class LoginVC: UIViewController {
         isPasswordVisible.toggle()
         passwordTextField.isSecureTextEntry = !isPasswordVisible
         
-        let imageName = isPasswordVisible ? "eye" : "eye.slash"
+        let imageName = isPasswordVisible ? LoginImages.eyeOpen : LoginImages.eyeClosed
         passwordToggleButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
     
@@ -127,19 +115,19 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        print("Forgot password tapped")
+        return
     }
     
     @IBAction func googleButtonTapped(_ sender: UIButton) {
-        print("Google login tapped")
+        return
     }
     
     @IBAction func appleButtonTapped(_ sender: UIButton) {
-        print("Apple login tapped")
+        return
     }
     
     @IBAction func facebookButtonTapped(_ sender: UIButton) {
-        print("Facebook login tapped")
+        return
     }
     
     @objc private func textFieldDidChange() {
