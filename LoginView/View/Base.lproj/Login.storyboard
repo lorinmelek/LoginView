@@ -118,9 +118,9 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyX-eg-2eM">
-                                <rect key="frame" x="24" y="255.00000000000003" width="345" height="20.333333333333343"/>
+                                <rect key="frame" x="50" y="290.33333333333331" width="26.333333333333329" height="10"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -130,13 +130,12 @@
                         <constraints>
                             <constraint firstItem="pSW-Mt-EQs" firstAttribute="top" secondItem="kU4-Lf-WBm" secondAttribute="bottom" constant="40" id="21n-Ia-B7f"/>
                             <constraint firstItem="Q5b-Mh-IcB" firstAttribute="top" secondItem="gre-0W-gQB" secondAttribute="bottom" constant="24" id="2dR-7t-izz"/>
-                            <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" secondItem="vyX-eg-2eM" secondAttribute="trailing" constant="24" id="39B-Wb-IC3"/>
-                            <constraint firstItem="vyX-eg-2eM" firstAttribute="bottom" secondItem="kU4-Lf-WBm" secondAttribute="bottom" id="5OI-Wb-tSY"/>
                             <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" secondItem="vsa-oR-ohB" secondAttribute="trailing" constant="24" id="A6I-1l-bWa"/>
                             <constraint firstItem="ngG-40-8YS" firstAttribute="top" secondItem="sFy-KQ-GQh" secondAttribute="top" constant="241" id="D47-AC-34B"/>
                             <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" secondItem="kU4-Lf-WBm" secondAttribute="trailing" constant="24" id="DIX-RD-q5X"/>
                             <constraint firstItem="1F2-g5-Fg6" firstAttribute="centerX" secondItem="Q5b-Mh-IcB" secondAttribute="centerX" id="DU3-9O-OLo"/>
                             <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Max-NC-QbH" secondAttribute="trailing" symbolic="YES" id="Fv3-DL-zqn"/>
+                            <constraint firstItem="vyX-eg-2eM" firstAttribute="top" secondItem="kU4-Lf-WBm" secondAttribute="bottom" constant="15" id="GsH-7S-HSF"/>
                             <constraint firstItem="1F2-g5-Fg6" firstAttribute="centerX" secondItem="gre-0W-gQB" secondAttribute="centerX" id="IXr-VQ-dzl"/>
                             <constraint firstItem="ngG-40-8YS" firstAttribute="centerY" secondItem="kU4-Lf-WBm" secondAttribute="centerY" id="Ldo-hv-dm6"/>
                             <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" secondItem="ngG-40-8YS" secondAttribute="trailing" constant="26" id="NgF-ec-akc"/>
@@ -146,12 +145,13 @@
                             <constraint firstItem="Max-NC-QbH" firstAttribute="top" secondItem="xPF-pT-MMa" secondAttribute="top" constant="40" id="U9W-mQ-UlU"/>
                             <constraint firstItem="O53-sj-5fm" firstAttribute="top" secondItem="Q5b-Mh-IcB" secondAttribute="bottom" constant="24.000000000000057" id="ZC8-Vg-ZHw"/>
                             <constraint firstItem="gre-0W-gQB" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="24" id="a90-Ux-qyz"/>
+                            <constraint firstItem="pSW-Mt-EQs" firstAttribute="top" secondItem="vyX-eg-2eM" secondAttribute="bottom" constant="15" id="alw-9c-kte"/>
                             <constraint firstItem="kU4-Lf-WBm" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="60" id="c0V-s0-rxz"/>
-                            <constraint firstItem="vyX-eg-2eM" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="24" id="hfO-dz-v8W"/>
                             <constraint firstItem="ngG-40-8YS" firstAttribute="bottom" secondItem="kU4-Lf-WBm" secondAttribute="bottom" id="hmT-1M-43d"/>
                             <constraint firstItem="kU4-Lf-WBm" firstAttribute="top" secondItem="vsa-oR-ohB" secondAttribute="bottom" constant="24" id="iV9-0c-F1b"/>
                             <constraint firstItem="xPF-pT-MMa" firstAttribute="trailing" secondItem="O53-sj-5fm" secondAttribute="trailing" constant="24" id="kZ9-bI-SkS"/>
                             <constraint firstItem="1F2-g5-Fg6" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="93" id="l9A-HU-O00"/>
+                            <constraint firstItem="vyX-eg-2eM" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="50" id="pBx-UJ-RgJ"/>
                             <constraint firstItem="vsa-oR-ohB" firstAttribute="leading" secondItem="xPF-pT-MMa" secondAttribute="leading" constant="60" id="qHd-aO-mrv"/>
                             <constraint firstItem="1F2-g5-Fg6" firstAttribute="top" secondItem="O53-sj-5fm" secondAttribute="bottom" constant="24.000000000000057" id="t6T-Dz-81Y"/>
                             <constraint firstItem="vsa-oR-ohB" firstAttribute="top" secondItem="Max-NC-QbH" secondAttribute="bottom" constant="40" id="uey-1v-maY"/>
